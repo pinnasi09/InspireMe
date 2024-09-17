@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InspireMe❤️-Quotes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">InspireMe❤️</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#hero">Generate</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="toggle" onclick="theme()">☀️</button>
+    </header>
+    <br>
+    
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Generate Inspiring Quotes with a Single Keyword</h1>
+            <p>Enter a keyword and discover quotes that match your mood or theme.</p>
+            <input type="text" id="keyword" placeholder="Enter keyword for a Quote ">
+            <button onclick="genQuote()">Generate</button>
+            <div id="quote-box">
+                <p id="quote"></p>
+            </div>
+            <br>
+            <button onclick="Copytext()">copy</button>
+            
+        </div>
+    </section>
+<br>
+<!--how it works-->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>Step 1</h3>
+                <img src="step.png" alt="step1">
+                <p>Enter your desired keyword.</p>
+            </div>
+            <div class="step">
+                <h3>Step 2</h3>
+                <img src="step.png" alt="step1">
+
+                <p>Click the "Generate" button.</p>
+            </div>
+            <div class="step">
+                <h3>Step 3</h3>
+                <img src="step.png" alt="step1">
+
+                <p>Instantly get a curated quote that matches your keyword.</p>
+            </div>
+        </div>
+    </section>
+
+        
+   
+</section>
+<!--popular quotes-->
+<br>
+    <section id="featured-quotes">
+        <h2>Popular Quotes</h2>
+        <div class="quote-grid">
+            <!-- Sample quotes -->
+            <div class="quote-item">"The best way to predict the future is to invent it." - Alan Kay</div>
+            <div class="quote-item">"In the middle of difficulty lies opportunity." - Albert Einstein</div>
+            <div class="quote-item">"The only limit to our realization of tomorrow is our doubts of today." - Franklin D. Roosevelt</div>
+            <div class="quote-item"> "Keep your face always toward the sunshine—and shadows will fall behind you. - Walt Whitman"</div>
+            <div class="quote-item">"Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau"</div>
+            <div class="quote-item">"Dream it. Wish it. Do it. - Unknown"</div>
+        </div>
+    </section>
+    <br>
+
+    <section id="cta">
+        <h2>Ready to Find Your Perfect Quote?</h2>
+        <p>Just enter your keyword and let the magic happen.</p>
+        <button onclick="location.href='#hero'">Generate quote</button>
+    </section>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 InspireMe❤️. designed by pinnasi <br> <br> All rights reserved.</p>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
