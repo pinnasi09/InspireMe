@@ -4,11 +4,12 @@ body {
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
 }
 
-
-img{
-    width:400px;
+img {
+    width: 100%;
+    max-width: 400px;
     border-radius: 5px;
 }
 
@@ -19,7 +20,7 @@ header {
     padding: 1em;
     background-color: #333;
     color: #fff;
-    border-radius: 30px;
+    
 }
 
 header .logo {
@@ -31,6 +32,7 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
@@ -42,23 +44,23 @@ header nav ul li a {
     text-decoration: none;
     transition: color 0.3s;
 }
-header nav ul li a:hover{
+
+header nav ul li a:hover {
     color: #007bff;
 }
 
-
 header #toggle {
     padding: 0.5em 1em;
-    background-color:white;
-    color: #fff;
+    background-color: white;
+    color: #333;
     border: none;
-    cursor:pointer;
+    cursor: pointer;
     border-radius: 20px;
 }
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(#7F7FD5,#91EAE4);
+    background: linear-gradient(#7F7FD5, #91EAE4);
     color: #fff;
     padding: 3em 1em;
     text-align: center;
@@ -80,31 +82,9 @@ header #toggle {
     max-width: 400px;
 }
 
-/*#hero button {
-    padding: 0.5em 1em;
-    background-color: #fff;
-    color: #333;
-    border: none;
-    cursor: pointer;
-}*/
-
-#hero .hero-graphic {
-    margin-top: 2em;
-    height: 200px;
-    background: url('graphic.svg') no-repeat center;
-    background-size: contain;
-}
-
-#keyword {
-    padding: 10px;
-    width: 250px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 #hero button {
     padding: 10px 15px;
-    background-color:#6a11cb;
+    background-color: #6a11cb;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -113,7 +93,7 @@ header #toggle {
 }
 
 #hero button:hover {
-    background-color:blue;
+    background-color: blue;
 }
 
 #hero #quote-box {
@@ -122,23 +102,15 @@ header #toggle {
     border: 1px solid #ddd;
     border-radius: 30px;
     background-color: black;
-    margin-top: 20px;
     font-size: 1.5rem;
     min-height: 100px;
-
-    min-height: 50px;
 }
-#hero #quote {
-    font-size: 1.2em ;
-    
-}
-
 
 /* How It Works Section */
 #how-it-works {
     padding: 2em 1em;
     text-align: center;
-    background:linear-gradient(#FCCF31,#F55555);
+    background: linear-gradient(#FCCF31, #F55555);
     border-radius: 20px;
 }
 
@@ -149,25 +121,24 @@ header #toggle {
 #how-it-works .steps {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 1em;
-    
 }
 
 #how-it-works .step {
-    width: 30%;
+    width: 100%;
+    max-width: 300px;
     padding: 1em;
-    background-color:lightgrey;
+    background-color: lightgrey;
     border-radius: 50px;
-    box-shadow: #007bff;
-    
-    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Featured Quotes Section */
 #featured-quotes {
     padding: 2em 1em;
     text-align: center;
-    background: linear-gradient(#7bc393,#31b7c2);
+    background: linear-gradient(#7bc393, #31b7c2);
     border-radius: 20px;
 }
 
@@ -187,14 +158,14 @@ header #toggle {
 #cta {
     padding: 2em 1em;
     text-align: center;
-    background:linear-gradient(to Right,rgb(80, 21, 80),rgb(15, 126, 162));
+    background: linear-gradient(to right, rgb(80, 21, 80), rgb(15, 126, 162));
     background-blend-mode: lighten;
     border-radius: 20px;
 }
 
 #cta button {
     padding: 0.5em 1em;
-    background-color:purple;
+    background-color: purple;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -203,7 +174,7 @@ header #toggle {
 
 /* Footer */
 footer {
-    background:linear-gradient(#006663,#111111);
+    background: linear-gradient(#006663, #111111);
     color: #fff;
     padding: 1em;
     text-align: center;
@@ -233,40 +204,31 @@ footer .social-media a {
 
 /* Dark Theme */
 body.dark-mode {
-    background-color:white;
+    background-color: white;
     color: #ddd;
 }
 
-
-
 body.dark-mode #hero {
-    background: linear-gradient(#333399,#FF00CC);
+    background: linear-gradient(#333399, #FF00CC);
 }
 
 body.dark-mode #hero button {
     background-color: #333;
     color: #fff;
 }
-body.dark-mode #hero #quote-box{
-    background-color:white;
+
+body.dark-mode #hero #quote-box {
+    background-color: white;
     color: black;
 }
 
 body.dark-mode #how-it-works .step {
-    background-color:rgb(131, 134, 164);
-}
-body.dark-mode #how-it-works{
-    background:linear-gradient(#0F3443,#34E89E);
-}
-body.dark-mode header #toggle {
-    padding: 0.5em 1em;
-    background-color:black;
-    color: #fff;
-    border: none;
-    cursor:pointer;
-    border-radius: 20px;
+    background-color: rgb(131, 134, 164);
 }
 
+body.dark-mode #how-it-works {
+    background: linear-gradient(#0F3443, #34E89E);
+}
 
 body.dark-mode #featured-quotes .quote-item {
     background-color: #444;
@@ -275,27 +237,13 @@ body.dark-mode #featured-quotes .quote-item {
 body.dark-mode #cta {
     background-color: #222;
 }
-body.dark-mode header nav ul li a:hover{
-    color:orange;
-}
-body.dark-mode #hero button {
-    padding: 10px 15px;
-    background-color:#6a11cb;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: 10px;
+
+body.dark-mode header nav ul li a:hover {
+    color: orange;
 }
 
-body.dark-mode #hero button:hover {
-    background-color:blue;
-}
 body.dark-mode #featured-quotes {
-    padding: 2em 1em;
-    text-align: center;
-    background: linear-gradient(to Right, #f7a5cb,#392d91);
-    border-radius: 20px;
+    background: linear-gradient(to right, #f7a5cb, #392d91);
 }
 
 /* Progress Ring */
@@ -311,5 +259,41 @@ body.dark-mode #featured-quotes {
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg);}
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin: 0.5em 0;
+    }
+
+    #hero .hero-content h1 {
+        font-size: 1.5em;
+    }
+
+    #hero .hero-content p {
+        font-size: 1em;
+    }
+
+    #how-it-works .step {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero input, #hero button {
+        width: 100%;
+        margin-bottom: 1em;
+    }
 }
